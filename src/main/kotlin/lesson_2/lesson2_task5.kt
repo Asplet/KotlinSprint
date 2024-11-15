@@ -7,9 +7,15 @@ fun main() {
     val deposit = 70000
     val interestRate = 16.7
     val yearsOfDeposit = 20
+    val accrualPeriod = 1
 
-    val totalDeposit = String.format("%.3f", (deposit * (1 + interestRate / 100).pow(yearsOfDeposit)))
+    val interestRateDel = interestRate / 100
+    val numberOfAccrualPeriods = yearsOfDeposit / accrualPeriod
 
-    println("Размер вклада через 20 лет: $totalDeposit")
+    val compoundInterestMultiplier = (1 + interestRateDel).pow(numberOfAccrualPeriods)
+
+    val totalDeposit = deposit * compoundInterestMultiplier
+
+    println("Размер вклада через $yearsOfDeposit лет: ${String.format("%.3f", totalDeposit)}")
 
 }
