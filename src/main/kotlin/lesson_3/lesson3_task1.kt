@@ -5,18 +5,12 @@ fun main() {
     val userName = "Пользователь"
     val dayTimeMessage = "Добрый день, "
     val eveningTimeMessage = "Добрый вечер, "
+    var greeting: String
 
-    val dayTime = 8
-    val eveningTime = 21
+    greeting = dayTimeMessage + userName
+    println(greeting)
 
-    fun welcomeMessage(currentTime: Int) {
-        when (currentTime){
-            in 6..18 -> println(dayTimeMessage + userName)
-            else -> println(eveningTimeMessage + userName)
-        }
-    }
-
-    welcomeMessage(dayTime)
-    welcomeMessage(eveningTime)
+    greeting = eveningTimeMessage + userName
+    println(greeting)
 
 }
