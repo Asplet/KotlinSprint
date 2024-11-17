@@ -5,18 +5,13 @@ fun main() {
     val name = "Татьяна"
     val patronymic = "Сергеевна"
     var surname = "Андреева"
+    var age = 20
 
-    fun personalInformation(age: Int) {
-        when (age) {
-            in 0..21 -> println("$surname $name $patronymic, $age лет")
-            else -> {
-                surname = "Сидорова"
-                println("$surname $name $patronymic, $age лет")
-            }
-        }
-    }
+    println("$surname $name $patronymic, $age лет")
 
-    personalInformation(20)
-    personalInformation(22)
+    surname = "Сидорова"
+    age = 22
+
+    println("$surname $name $patronymic, $age лет")
 
 }
