@@ -7,14 +7,14 @@ const val INCORRECT_SEASON = "Зима"
 
 fun main() {
 
-    val currentWeatherType = true
-    val positionOfTheAwning = true
+    val isSunny = true
+    val isAwningOpen = true
     val currentAirHumidity = 20
     val currentSeason = "Зима"
 
     println(
         "Благоприятные ли условия сейчас для роста бобовых? ${
-            (currentWeatherType == SUNNY_WEATHER) && (positionOfTheAwning == OPEN_AWNING)
+            (isSunny == SUNNY_WEATHER) && (isAwningOpen == OPEN_AWNING)
                     && (currentAirHumidity == CORRECT_AIR_HUMIDITY) && currentSeason != INCORRECT_SEASON
         }"
     )
