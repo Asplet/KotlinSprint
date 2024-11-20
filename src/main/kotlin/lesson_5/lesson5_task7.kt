@@ -13,6 +13,8 @@ fun main() {
 
     val totalFuelPrice = fuelForTrip * userFuelPrice
 
-    println("Для поездки необходимо топлива: ${String.format("%.2f", fuelForTrip)} л.\n" +
-            "Общая стоимость поездки: ${String.format("%.2f", totalFuelPrice)} руб.")
+    println(
+        "Для поездки необходимо топлива: ${String.format("%.2f", fuelForTrip)} л.\n" +
+                "Общая стоимость поездки: ${String.format("%.2f", totalFuelPrice)} руб."
+    )
 }
